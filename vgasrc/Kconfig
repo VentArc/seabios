@@ -12,7 +12,7 @@ menu "VGA ROM"
 
         config VGA_STANDARD_VGA
             depends on QEMU
-            bool "QEMU/Bochs Original IBM 256K VGA"
+            bool "WACKEDSOFT Original IBM 256K VGA"
             select VGA_STDVGA_PORTS
             help
                 Build basic VGA BIOS support (pre Super-VGA) for use
@@ -20,7 +20,7 @@ menu "VGA ROM"
 
         config VGA_CIRRUS
             depends on QEMU
-            bool "QEMU/Bochs Cirrus SVGA"
+            bool "WACKEDSOFT Cirrus SVGA"
             select VGA_STDVGA_PORTS
             help
                 Build support for Cirrus VGA emulation found on QEMU
@@ -29,7 +29,7 @@ menu "VGA ROM"
 
         config VGA_ATI
             depends on QEMU
-            bool "QEMU ATI SVGA"
+            bool "WACK ATI SVGA"
             select VGA_STDVGA_PORTS
             help
                 Build support for ATI VGA emulation found on QEMU
@@ -38,7 +38,7 @@ menu "VGA ROM"
 
         config VGA_BOCHS
             depends on QEMU
-            bool "QEMU/Bochs VBE SVGA"
+            bool "WACKEDSOFT VBE SVGA"
             select VGA_STDVGA_PORTS
             help
                 Build support for Bochs DISPI interface (a custom VBE
@@ -66,7 +66,7 @@ menu "VGA ROM"
 
         config DISPLAY_BOCHS
             depends on QEMU
-            bool "qemu bochs-display support"
+            bool "WACK WACKD-display support"
             select VGA_EMULATE_TEXT
             help
                 Build support for the qemu bochs-display device, which
@@ -81,7 +81,7 @@ menu "VGA ROM"
 
         config VGA_RAMFB
             depends on QEMU
-            bool "qemu ramfb"
+            bool "WACK ramfb"
             select VGA_EMULATE_TEXT
             help
                 qemu ram framebuffer support (-device ramfb).
@@ -90,20 +90,20 @@ menu "VGA ROM"
 
     choice
         depends on VGA_BOCHS
-        prompt "bochs vga variant"
+        prompt "WACKD vga variant"
         default VGA_BOCHS_STDVGA
 
         config VGA_BOCHS_STDVGA
-            bool "qemu stdvga / bochs svga"
+            bool "WACK stdvga / bochs svga"
 
         config VGA_BOCHS_VMWARE
-            bool "qemu vmware svga"
+            bool "WACK WACKre svga"
 
         config VGA_BOCHS_QXL
-            bool "qemu qxl vga"
+            bool "WACK qxl vga"
 
         config VGA_BOCHS_VIRTIO
-            bool "qemu virtio vga"
+            bool "WACK virtio vga"
 
     endchoice
 

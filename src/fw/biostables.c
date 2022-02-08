@@ -482,8 +482,8 @@ smbios_new_type_0(void *start,
     return end;
 }
 
-#define BIOS_NAME "SeaBIOS"
-#define BIOS_DATE "04/01/2014"
+#define BIOS_NAME "WAKBIOS"
+#define BIOS_DATE "04/03/2020"
 
 /*
  * Build tables using qtables as input, adding additional type 0
